@@ -2,6 +2,16 @@
 
 **Seamlessly connect your Statamic forms to Mailchimp** - Automatically add form submissions to your Mailchimp lists with advanced field mapping and configuration options.
 
+## 🔗 Related Connectors
+
+This connector is part of the **Forms To Wherever** ecosystem. Check out our other connectors:
+
+- **[Forms To Wherever](https://statamic.com/addons/stokoe/forms-to-wherever)** - Base package (required)
+- **[Forms To HubSpot](https://statamic.com/addons/stokoe/forms-to-hubspot-connector)** - HubSpot CRM integration
+- **[Forms To ConvertKit](https://statamic.com/addons/stokoe/forms-to-convertkit-connector)** - ConvertKit email marketing
+- **[Forms To ActiveCampaign](https://statamic.com/addons/stokoe/forms-to-activecampaign-connector)** - ActiveCampaign automation
+- **[Forms To Salesforce](https://statamic.com/addons/stokoe/forms-to-salesforce-connector)** - Salesforce CRM integration
+
 ## Features
 
 - **Automatic subscriber addition** to any Mailchimp list
