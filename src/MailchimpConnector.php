@@ -49,7 +49,6 @@ class MailchimpConnector implements ConnectorInterface
                     'display' => 'Email Field',
                     'instructions' => 'Form field containing the email address',
                     'default' => 'email',
-                    'validate' => 'required',
                 ],
             ],
             [
@@ -133,13 +132,13 @@ class MailchimpConnector implements ConnectorInterface
         $url = "https://{$datacenter}.api.mailchimp.com/3.0/lists/{$listId}/members";
 
         // Build merge fields from mapping
-        $mergeFields = [];
+        $mergeFields = new \stdClass();
         foreach ($fieldMapping as $mapping) {
             $formField = $mapping['form_field'] ?? '';
             $mailchimpField = $mapping['mailchimp_field'] ?? '';
 
             if ($formField && $mailchimpField && isset($formData[$formField])) {
-                $mergeFields[$mailchimpField] = $formData[$formField];
+                $mergeFields->{$mailchimpField} = $formData[$formField];
             }
         }
 
@@ -170,6 +169,8 @@ class MailchimpConnector implements ConnectorInterface
                 Log::error('Mailchimp API error', [
                     'status' => $response->status(),
                     'error' => $error['detail'] ?? 'Unknown error',
+                    'errors' => $error['errors'] ?? [],
+                    'full_response' => $error,
                     'email' => $email,
                     'form' => $submission->form()->handle(),
                     'submission_id' => $submission->id(),

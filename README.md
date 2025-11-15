@@ -187,6 +187,10 @@ Check `storage/logs/laravel.log` for detailed connector activity.
 - Email addresses are validated before sending to Mailchimp
 - Comprehensive input sanitization and validation
 
+## Available Connectors
+
+- **[HubSpot Connector](https://statamic.com/addons/stokoe/forms-to-hubspot-connector)** - Create and update HubSpot contacts
+
 ## Support
 
 - **Marketplace**: [Forms To Mailchimp Connector](https://statamic.com/addons/stokoe/forms-to-mailchimp-connector)
