@@ -12,7 +12,7 @@
 
 ## Requirements
 
-- [Forms To Wherever](https://github.com/stokoe/forms-to-wherever) base addon
+- [Forms To Wherever](https://statamic.com/addons/stokoe/forms-to-wherever) base addon
 - Mailchimp account with API access
 - PHP 8.2+
 - Statamic 5.0+
@@ -189,8 +189,8 @@ Check `storage/logs/laravel.log` for detailed connector activity.
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/stokoe/forms-to-mailchimp-connector/issues)
-- **Documentation**: [Forms To Wherever Docs](https://github.com/stokoe/forms-to-wherever)
+- **Marketplace**: [Forms To Mailchimp Connector](https://statamic.com/addons/stokoe/forms-to-mailchimp-connector)
+- **Base Addon**: [Forms To Wherever](https://statamic.com/addons/stokoe/forms-to-wherever)
 - **Mailchimp API**: [Official Documentation](https://mailchimp.com/developer/marketing/api/)
 
 ## License
