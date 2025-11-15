@@ -1,0 +1,38 @@
+{
+    "name": "stokoe/forms-to-mailchimp-connector",
+    "autoload": {
+        "psr-4": {
+            "Stokoe\\FormsToMailchimpConnector\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stokoe\\FormsToMailchimpConnector\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0",
+        "stokoe/forms-to-wherever": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Forms To Mailchimp Connector",
+            "description": "Forms To Mailchimp Connector addon"
+        },
+        "laravel": {
+            "providers": [
+                "Stokoe\\FormsToMailchimpConnector\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
