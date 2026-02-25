@@ -138,7 +138,15 @@ class MailchimpConnector implements ConnectorInterface
             $mailchimpField = $mapping['mailchimp_field'] ?? '';
 
             if ($formField && $mailchimpField && isset($formData[$formField])) {
-                $mergeFields->{$mailchimpField} = $formData[$formField];
+                $value = $formData[$formField];
+
+                // Skip null/empty values to allow multiple conditional fields
+                // to map to the same Mailchimp merge tag (first non-empty value wins)
+                if (isset($mergeFields->{$mailchimpField}) && ($value === null || $value === '')) {
+                    continue;
+                }
+
+                $mergeFields->{$mailchimpField} = $value;
             }
         }
 
